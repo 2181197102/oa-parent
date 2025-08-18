@@ -1,0 +1,27 @@
+package com.zy.oa.auth.service.impl;
+
+import com.zy.oa.auth.mapper.AuthorizationMapper;
+import com.zy.oa.auth.model.Authorization;
+import com.zy.oa.auth.service.AuthorizationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service("authorizationService")
+public class AuthorizationServiceImpl implements AuthorizationService {
+
+    @Autowired
+    private AuthorizationMapper authorizationMapper;
+
+    public void authorize(Authorization authorization) {
+        authorizationMapper.authorize(authorization);
+    }
+
+    public Authorization findById(Long id) {
+        return authorizationMapper.findById(id);
+    }
+
+    public void unauthorize(Long id) {
+        authorizationMapper.unauthorize(id);
+    }
+
+}

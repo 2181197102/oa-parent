@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zy.oa.auth.mapper.AuthorizationMapper">
+
+    <resultMap id="AuthorizationResultMap" type="com.zy.oa.auth.model.Authorization">
+        <result property="id" column="id"/>
+        <result property="employeeId" column="employee_id"/>
+        <result property="roleId" column="role_id"/>
+    </resultMap>
+
+    <insert id="authorize" parameterType="com.zy.oa.auth.model.Authorization" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO authorization ( employee_id, role_id ) VALUES (#{employeeId}, #{roleId})
+    </insert>
+
+    <select id="findById" parameterType="int" resultMap="AuthorizationResultMap">
+        SELECT * FROM authorization WHERE ID = #{id}
+    </select>
+
+    <delete id="unauthorize" parameterType="int">
+        DELETE FROM authorization WHERE ID = #{id}
+    </delete>
+</mapper>
