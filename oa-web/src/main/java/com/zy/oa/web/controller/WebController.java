@@ -29,6 +29,7 @@ public class WebController {
     public String addEmployee(Employee employee) {
         try{
             employeeService.addEmployee(employee);
+            System.out.println("Employee added: " + employee);
         } catch (Exception e) {
             e.printStackTrace();
             return "Error adding employee: " + e.getMessage();
