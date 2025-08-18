@@ -29,5 +29,10 @@ public class Authorization {
         this.roleId = roleId;
     }
 
+    @Override
+    public String toString() {
+        return "Authorization [id=" + id + ", employeeId=" + employeeId + ", roleId=" + roleId + "]";
+    }
+
 
 }

@@ -14,6 +14,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
 
     public void authorize(Authorization authorization) {
         authorizationMapper.authorize(authorization);
+        System.out.println("Authorization successful for: " + authorization);
     }
 
     public Authorization findById(Long id) {
