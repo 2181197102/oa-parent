@@ -18,6 +18,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     }
 
     public Authorization findById(Long id) {
+        System.out.println("Finding authorization by ID: " + id);
         return authorizationMapper.findById(id);
     }
 
