@@ -18,10 +18,13 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     }
 
     public Authorization findById(Long id) {
+        System.out.println("Finding authorization by ID: " + id);
+        System.out.println("prepare to execute findById sql query... ...");
         return authorizationMapper.findById(id);
     }
 
     public void unauthorize(Long id) {
+        System.out.println("Unauthorized ID: " + id);
         authorizationMapper.unauthorize(id);
     }
 
