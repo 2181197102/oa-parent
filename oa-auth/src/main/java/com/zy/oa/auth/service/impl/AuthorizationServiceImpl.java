@@ -15,6 +15,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     public void authorize(Authorization authorization) {
         authorizationMapper.authorize(authorization);
         System.out.println("Authorization successful for:..." + authorization);
+        System.out.println("modify the authorizationMapper to use the correct SQL query for authorization. in feature/002");
     }
 
     public Authorization findById(Long id) {
