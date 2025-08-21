@@ -25,6 +25,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
 
     public void unauthorize(Long id) {
         System.out.println("Unauthorized ID: " + id);
+        System.out.println("prepare to execute unauthorize sql query... ...");
         authorizationMapper.unauthorize(id);
     }
 
