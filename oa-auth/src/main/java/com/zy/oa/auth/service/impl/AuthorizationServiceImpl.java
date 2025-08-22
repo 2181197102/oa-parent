@@ -32,6 +32,11 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         System.out.println("finish full of feature/006");
         System.out.println("提交一个新功能");
         System.out.println("对上一次commit补充代码");
+        System.out.println("1111111");
+        System.out.println("2222222");
+        System.out.println("3333333");
+        System.out.println("5555555");
+        System.out.println("6666666");
         authorizationMapper.unauthorize(id);
     }
 
