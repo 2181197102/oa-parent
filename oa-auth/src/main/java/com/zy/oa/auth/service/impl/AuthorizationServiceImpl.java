@@ -30,6 +30,8 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         System.out.println("prepare to execute unauthorize sql query... ...");
         System.out.println("finish part of feature/006");
         System.out.println("finish full of feature/006");
+        System.out.println("finish part of feature/006");
+        System.out.println("finish full of feature/006");
         System.out.println("提交一个新功能");
         System.out.println("对上一次commit补充代码");
         System.out.println("1111111");
