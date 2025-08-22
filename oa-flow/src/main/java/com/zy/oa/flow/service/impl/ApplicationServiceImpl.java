@@ -18,6 +18,7 @@ public class ApplicationServiceImpl implements ApplicationService {
     }
 
     public Application findById(Long id) {
+        System.out.println("Finding application by ID: " + id);
         return applicationMapper.findById(id);
     }
 
