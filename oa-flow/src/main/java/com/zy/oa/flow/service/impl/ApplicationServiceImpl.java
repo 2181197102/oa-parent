@@ -13,6 +13,7 @@ public class ApplicationServiceImpl implements ApplicationService {
     private ApplicationMapper applicationMapper;
 
     public void create(Application app) {
+        System.out.println("Creating application: " + app);
         applicationMapper.create(app);
     }
 
